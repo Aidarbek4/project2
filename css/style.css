@@ -6,6 +6,27 @@ body.open {
   overflow: hidden;
 }
 
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .container {
   max-width: 1160px;
   margin: 0 auto;
@@ -602,6 +623,10 @@ button {
   position: relative;
   -webkit-transition: all 0.2s linear 0.3s;
   transition: all 0.2s linear 0.3s;
+}
+.portfolio__gallery-img__wrapper.visible {
+  -webkit-animation: scale 0.8s;
+          animation: scale 0.8s;
 }
 .portfolio__gallery-img__wrapper:hover .portfolio__gallery-img__info {
   display: -webkit-box;

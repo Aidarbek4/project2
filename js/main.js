@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (category === "all" || item.dataset.category === category) {
                     item.style.display = "block";
+                    item.classList.add("visible")
                 }
             });
 

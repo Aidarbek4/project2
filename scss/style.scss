@@ -12,6 +12,14 @@ body{
     }
 }
 
+@keyframes scale {
+    from{
+        transform: scale(0);
+    } to{
+        transform: scale(1);
+    }
+}
+
 .container {
     max-width: 1160px;
     margin: 0 auto;
@@ -581,6 +589,12 @@ button{
                 height: 260px;
                 position: relative;
                 transition: all 0.2s linear 0.3s;
+                
+                &.visible{
+                    animation: scale 0.8s;
+                }
+
+                
                 &:hover{
                     .portfolio__gallery-img__info{
                         display: flex;
